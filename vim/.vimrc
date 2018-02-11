@@ -26,8 +26,7 @@ Plugin 'scrooloose/syntastic'
 " You need to clone the github project and move the colors file.
 Plugin 'tomasr/molokai'
 
-" All of your Plugins must be added before the following line
-"Split navigations
+" All of your Plugins must be added before the following line "Split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -35,13 +34,13 @@ nnoremap <C-H> <C-W><C-H>
 
 "Make it easier for left hand to not stretch
 :inoremap jk <ESC>
-:inoremap <ESC> <nop>
+":inoremap <ESC> <nop>
 
 "Wean myself off the arrow keys
 noremap <Up> <C-U>
 noremap <Down> <C-F>
-noremap <Left> <nop>
-noremap <Right> <nop>
+"noremap <Left> <nop>
+"noremap <Right> <nop>
 
 "Enable folding
 "set foldmethod=indent

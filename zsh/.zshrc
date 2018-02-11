@@ -17,6 +17,9 @@ HISTFILE=~/.histfile
 HISTSIZE=990000
 SAVEHIST=990000
 bindkey -e
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
+
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename "$HOME/.zshrc"
