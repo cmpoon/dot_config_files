@@ -3,7 +3,7 @@
 #for debian ubuntu
 
 #sudo apt-get update
-sudo apt-get install -y git zsh curl powerline
+sudo apt-get install -y git zsh curl vim wget powerline
 #zsh-antigen installed below
 
 git config --global user.email "cmpoon@users.noreply.github.com"
