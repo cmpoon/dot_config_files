@@ -1,0 +1,17 @@
+#!/bin/sh
+
+export GOPATH="/home/cmpoon/go"
+export PATH="$PATH:/home/cmpoon/bin/GoLand-2018.2.1/bin:$HOME/bin:$HOME/anaconda3/bin:$GOPATH/bin"
+export PATH="$PATH:$GOPATH/src/github.com/uber/go-torch/FlameGraph/"
+
+source ~/vbaseenv/bin/activate
+
+alias aws-development='unset AWS_PROFILE; aws-google-auth -p aws-dev; export AWS_PROFILE=aws-dev'
+alias cdmain='cd ~/go/src/'
+
+alias gpff='git pull --ff-only origin master'
+alias gprb='git pull --rebase origin master'
+alias gprbi='git pull --rebase=interactive origin master'
+alias cdu='cd-gitroot'
+alias pchk='export ORIGPWD=$(pwd); cdmain; make staticcheck && make static-tests-other && make static-tests-frontend && make vendorcheck && echo "All OK!"; cd $ORIGPWD'
+alias testwin='cdmain; bazel build --platforms=@io_bazel_rules_go//go/toolchain:windows_amd64 //installer && scp -i ~/.ssh/id_rsa ./bazel-bin/installer/windows_amd64_pure_stripped/installer.exe cmpoon@192.168.122.101:"C:\\Users\\cmpoon\\" && ssh -i ~/.ssh/id_rsa.pub cmpoon@192.168.122.101'

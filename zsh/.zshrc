@@ -27,12 +27,6 @@ zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit
 compinit
 
-alias gpff='git pull --ff-only origin master'
-alias gprb='git pull --rebase origin master'
-alias gprbi='git pull --rebase=interactive origin master'
-
-alias cdu='cd-gitroot'
-
 export VISUAL=vim
 export EDITOR="$VISUAL"
  #End of lines added by compinstall
@@ -42,3 +36,8 @@ if [ -f '/Users/admin/Downloads/.zshrc/google-cloud-sdk/path.zsh.inc' ]; then so
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/admin/Downloads/.zshrc/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/admin/Downloads/.zshrc/google-cloud-sdk/completion.zsh.inc'; fi
+
+
+#source ~/vbaseenv/bin/activate
+source ~/vbaseenv/bin/aws_zsh_completer.sh
+source ~/.sourceme
