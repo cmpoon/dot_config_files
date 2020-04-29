@@ -1,17 +1,32 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 export GOPATH="/home/cmpoon/go"
-export PATH="$PATH:/home/cmpoon/bin/GoLand-2018.2.1/bin:$HOME/bin:$HOME/anaconda3/bin:$GOPATH/bin"
+export GOROOT="/usr/local/go"
+export MAINREPOPATH="$GOPATH/src/repo.jazznetworks.com/jazz/main"
+export PATH="$PATH:/usr/local/go/bin:/home/cmpoon/bin:$GOPATH/bin:$MAINREPOPATH/.bin:/home/cmpoon/.cargo/bin"
 export PATH="$PATH:$GOPATH/src/github.com/uber/go-torch/FlameGraph/"
+export JAVA_HOME="/usr/lib/jvm/java-10-oracle/"
+export PATH="$PATH:$JAVA_HOME/bin:/snap/bin"
 
-source ~/vbaseenv/bin/activate
 
+alias aga='aws-google-auth --save-failure-html -r "arn:aws:iam::" && echo $( scp -r ~/.aws/* cmpoon@poon.cm:~/.aws/ )'
 alias aws-development='unset AWS_PROFILE; aws-google-auth -p aws-dev; export AWS_PROFILE=aws-dev'
-alias cdmain='cd ~/go/src/'
-
 alias gpff='git pull --ff-only origin master'
 alias gprb='git pull --rebase origin master'
 alias gprbi='git pull --rebase=interactive origin master'
+alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'
+alias gpforce='git push origin +$(git rev-parse --abbrev-ref HEAD)'
+alias gpnew='git push --set-upstream origin +$(git rev-parse --abbrev-ref HEAD)'
+alias goverwrite='git fetch && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)'
 alias cdu='cd-gitroot'
-alias pchk='export ORIGPWD=$(pwd); cdmain; make staticcheck && make static-tests-other && make static-tests-frontend && make vendorcheck && echo "All OK!"; cd $ORIGPWD'
-alias testwin='cdmain; bazel build --platforms=@io_bazel_rules_go//go/toolchain:windows_amd64 //installer && scp -i ~/.ssh/id_rsa ./bazel-bin/installer/windows_amd64_pure_stripped/installer.exe cmpoon@192.168.122.101:"C:\\Users\\cmpoon\\" && ssh -i ~/.ssh/id_rsa.pub cmpoon@192.168.122.101'
+
+
+alias cdmain='cd $MAINREPOPATH'
+alias cb='xsel -ib'
+
+alias k8svers="kubectl get nodes -o yaml | grep 'kubeletVersion\|kubeProxyVersion'"
+alias kprjctl='kubectl --kubeconfig="$(pwd)/admin.conf"'
+
+
+source ~/vbaseenv/bin/activate
+
