@@ -1,0 +1,38 @@
+{
+    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\pythonw.exe",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "php.validate.executablePath": "C:\\xampp\\php\\php.exe",
+    "editor.fontLigatures": true,
+    //"editor.fontFamily": "FiraCode Nerd Font",
+    //"editor.fontFamily": "Fira Code Retina Nerd Font Complete",
+    //"editor.fontFamily": "Fira Code Retina Nerd Font_0",
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "'FiraCode Nerd Font', 'Cascadia Code PL', Consolas, 'Courier New', monospace",
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    },
+    "C_Cpp.updateChannel": "Insiders",
+    "go.useLanguageServer": true,
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        },
+        // Optional: Disable snippets, as they conflict with completion ranking.
+        "editor.snippetSuggestions": "none",
+    },
+    "[go.mod]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        },
+    },
+    "gopls": {
+        // Add parameter placeholders when completing a function.
+        "usePlaceholders": true,
+        // If true, enable additional analyses with staticcheck.
+        // Warning: This will significantly increase memory usage.
+        "staticcheck": false,
+    }
+}
