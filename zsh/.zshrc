@@ -9,8 +9,6 @@ source "$HOME/antigen.zsh"
 #export WORKON_HOME="$HOME/.virtualenvs"
 # source /usr/local/bin/virtualenvwrapper.sh
 
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 
 # POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 
@@ -69,7 +67,6 @@ export EDITOR="$VISUAL"
 #alias aws-development='unset AWS_PROFILE; aws-google-auth -p aws-dev; export AWS_PROFILE=aws-dev'
 source ~/.sourceme
 
-source ~/vbaseenv/bin/aws_zsh_completer.sh
 
 if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 
@@ -82,7 +79,6 @@ if [ -f '/home/cmpoon/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Completion for kitty
-kitty + complete setup zsh | source /dev/stdin
 # RPROMPT="$RPROMPT %{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%} [%D{%y-%m-%f}|%*]"
 
 # RPROMPT="%{$fg[blue]%}[%*]%{$reset_color%} $RPROMPT"

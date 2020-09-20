@@ -27,6 +27,6 @@ alias cb='xsel -ib'
 alias k8svers="kubectl get nodes -o yaml | grep 'kubeletVersion\|kubeProxyVersion'"
 alias kprjctl='kubectl --kubeconfig="$(pwd)/admin.conf"'
 
-
-source ~/vbaseenv/bin/activate
+export BIKEREPO="/home/cmpoon/win/go/src/git.amcc-consulting.co.uk/Bike" 
+alias cdbike="cd $BIKEREPO"
 
