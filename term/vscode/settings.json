@@ -34,5 +34,29 @@
         // If true, enable additional analyses with staticcheck.
         // Warning: This will significantly increase memory usage.
         "staticcheck": false,
+    },
+    "idf.espIdfPathWin": "c:\\Users\\cmpoo\\Desktop\\esp-idf",
+    "idf.customExtraPaths": "C:\\Users\\cmpoo\\.espressif\\tools\\ccache\\3.7;C:\\Users\\cmpoo\\.espressif\\tools\\cmake\\3.16.4\\bin;C:\\Users\\cmpoo\\.espressif\\tools\\dfu-util\\0.9\\dfu-util-0.9-win64;C:\\Users\\cmpoo\\.espressif\\tools\\esp32s2ulp-elf\\2.28.51-esp-20191205\\esp32s2ulp-elf-binutils\\bin;C:\\Users\\cmpoo\\.espressif\\tools\\esp32ulp-elf\\2.28.51-esp-20191205\\esp32ulp-elf-binutils\\bin;C:\\Users\\cmpoo\\.espressif\\tools\\idf-exe\\1.0.1;C:\\Users\\cmpoo\\.espressif\\tools\\ninja\\1.10.0;C:\\Users\\cmpoo\\.espressif\\tools\\openocd-esp32\\v0.10.0-esp32-20200420\\openocd-esp32\\bin;C:\\Users\\cmpoo\\.espressif\\tools\\xtensa-esp32-elf\\esp-2020r2-8.2.0\\xtensa-esp32-elf\\bin;C:\\Users\\cmpoo\\.espressif\\tools\\xtensa-esp32s2-elf\\esp-2020r2-8.2.0\\xtensa-esp32s2-elf\\bin",
+    "idf.customExtraVars": "{\"OPENOCD_SCRIPTS\":\"${TOOL_PATH}/openocd-esp32/share/openocd/scripts\"}",
+    "sync.gist": "c17da5b521d9f83691cc",
+    "workbench.iconTheme": "material-icon-theme",
+    "todo-tree.tree.showScanModeButton": false,
+    "sync.quietSync": true,
+    "python.languageServer": "Microsoft",
+    "idf.showOnboardingOnInit": false,
+    "tabnine.experimentalAutoImports": true,
+    // "editor.multiCursorModifier": "ctrlCmd",
+    "vscode_custom_css.imports": [
+        "" /*file:///C:/Users/cmpoo/env_config/term/vscode/custom.css"*/
+    ],
+    "vscode_custom_css.policy": true,
+    "customizeUI.activityBar": "bottom",
+    "customizeUI.activityBarHideSettings": true,
+    // "customizeUI.font.regular": "Helvetica Nueve",
+    "customizeUI.font.monospace": "FiraCode Nerd Font",
+    "customizeUI.stylesheet": {
+        ".tabs-and-actions-container .editor-actions":"display: none !important;position: absolute;           top: 35px;right: 0;z-index: 1;background-color: #2D2D2D;",
+        ".tabs-and-actions-container:hover .editor-actions": "display: flex !important;",
+        ".title.tabs.show-file-icons": "overflow: unset !important;",
     }
 }
