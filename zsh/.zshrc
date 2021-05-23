@@ -52,8 +52,7 @@ compinit
 export VISUAL=vim
 export EDITOR="$VISUAL"
  #End of lines added by compinstall
-
-#export PATH="$PATH:~/bin/GoLand-2018.2.1:~/bin:~/anaconda3/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 #source ~/vbaseenv/bin/activate
 #source ~/vbaseenv/bin/aws_zsh_completer.sh
@@ -85,4 +84,5 @@ if [ -f '/home/cmpoon/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# export DOCKER_HOST=tcp://localhost:2375
 
